@@ -32,9 +32,9 @@ public class CVManageController {
 
     @PutMapping
     public ResponseEntity<?> updateCV(@RequestBody CVUpdateForm cvUpdateForm) {
-        String url = cvManageService.update(cvUpdateForm);
+        String location = cvManageService.update(cvUpdateForm);
         //если добавили, то возвращаем адрес ресурса
-        if(url != null) return ResponseEntity.created(URI.create(url)).build();
+        if(location != null) return ResponseEntity.created(URI.create(location)).build();
         return ResponseEntity.noContent().build();
     }
 

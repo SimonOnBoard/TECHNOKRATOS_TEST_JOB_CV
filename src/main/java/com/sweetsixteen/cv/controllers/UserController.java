@@ -34,9 +34,9 @@ public class UserController {
     // Source: https://assertible.com/blog/7-http-methods-every-web-developer-should-know-and-how-to-test-them#:~:text=Repeatedly%20calling%20a%20PUT%20request,should%20return%20the%20correct%20data.
     @PutMapping
     public ResponseEntity<?> updateUser(@RequestBody UserUpdateForm userForm) {
-        String url = profileService.updateUser(userForm);
+        String location = profileService.updateUser(userForm);
         //если добавили, то возвращаем адрес ресурса
-        if(url != null) return ResponseEntity.created(URI.create(url)).build();
+        if(location != null) return ResponseEntity.created(URI.create(location)).build();
         return ResponseEntity.noContent().build();
     }
 }
