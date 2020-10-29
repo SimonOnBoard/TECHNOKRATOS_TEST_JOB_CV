@@ -25,7 +25,7 @@ public class ProfileServiceImpl implements ProfileService {
         return userMapper.userToUserDto(user);
     }
 
-    // TODO: 28.10.2020 https://stackoverflow.com/questions/930433/apply-properties-values-from-one-object-to-another-of-the-same-type-automaticall
+    // TODO: 28.10.2020 right way to copy properties: https://stackoverflow.com/questions/930433/apply-properties-values-from-one-object-to-another-of-the-same-type-automaticall
     @Override
     public String updateUser(UserUpdateForm form) {
         User user = null;

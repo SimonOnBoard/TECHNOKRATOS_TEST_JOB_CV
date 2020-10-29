@@ -5,6 +5,7 @@ import com.sweetsixteen.cv.forms.UserBasicForm;
 import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.annotation.processing.Generated;
@@ -23,6 +24,8 @@ public class User {
     private String lastName;
     private String patronymic;
 
+
+    @TextIndexed(weight = 2)
     private String location;
 
     private String email;

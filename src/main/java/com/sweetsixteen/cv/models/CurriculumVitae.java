@@ -7,6 +7,7 @@ import com.sweetsixteen.cv.models.embedded.Work;
 import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
@@ -23,9 +24,11 @@ public class CurriculumVitae {
     private ObjectId id;
 
     private ObjectId userId;
-
+    @TextIndexed(weight = 10)
     private String title;
+    @TextIndexed(weight = 15)
     private String about;
+    @TextIndexed(weight = 5)
     private String location;
 
     private List<String> competences;

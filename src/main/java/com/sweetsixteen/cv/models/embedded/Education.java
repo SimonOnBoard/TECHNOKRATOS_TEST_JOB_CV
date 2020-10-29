@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 @Data
 @RequiredArgsConstructor
 public class Education {
-
     private String specialty;
     private String graduationYear;
 }

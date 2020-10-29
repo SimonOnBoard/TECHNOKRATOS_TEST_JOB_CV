@@ -5,10 +5,8 @@ import com.sweetsixteen.cv.models.embedded.Education;
 import com.sweetsixteen.cv.models.embedded.Language;
 import com.sweetsixteen.cv.models.embedded.Work;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.bson.types.ObjectId;
 
 import java.util.List;
 
